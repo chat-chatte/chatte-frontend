@@ -13,10 +13,10 @@ export const Line = styled.div`
     justify-content: right;
   }
 `;
-
+// Mensagem recebida
 export const Content = styled.div`
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 10px 10px 10px 10px;
   box-shadow: 0 1px 1px #ccc;
   display: flex;
   flex-direction: column;

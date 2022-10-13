@@ -2,12 +2,12 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 59px;
-  background-color: #f0f2f5;
+  background-color: #2c2c2c;
   padding: 10px 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 5px;
+  border-bottom: 2px solid #3a3a3a;
   box-shadow: 0 1px 2px #0003;
 `;
 
@@ -25,7 +25,7 @@ export const Options = styled.div`
   svg {
     width: 24px;
     height: 24px;
-    color: #54656f;
+    color: #f72585;
     cursor: pointer;
   }
 `;

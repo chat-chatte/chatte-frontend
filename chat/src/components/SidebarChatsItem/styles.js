@@ -6,9 +6,10 @@ export const Container = styled.div`
   justify-content: start;
   padding: 15px 20px;
   cursor: pointer;
-
+  color: #2c2c2c;
   &:hover {
-    background-color: #f0f2f5;
+    background-color: #2c2c2c;
+    color: white;
   }
 
   svg {
@@ -21,7 +22,8 @@ export const Container = styled.div`
   }
 
   &.active {
-    background-color: #f0f2f5;
+    background-color: #2c2c2c;
+    color: #FFC200; 
   }
 `;
 

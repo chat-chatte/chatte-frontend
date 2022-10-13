@@ -40,7 +40,7 @@ const SidebarHeader = ({ setUserChat }) => {
   return (
     <C.Container>
       <C.Avatar
-        src={user?.photoURL}
+        src={"https://cdn-icons-png.flaticon.com/512/147/147142.png"}
         onClick={() => [auth.signOut(), setUserChat(null)]}
       />
       <C.Options>

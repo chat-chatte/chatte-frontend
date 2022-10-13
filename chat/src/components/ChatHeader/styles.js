@@ -2,7 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 59px;
-  background-color: #f0f2f5;
+  border-bottom: 1px solid #181818;
+  background-color: #2c2c2c;
   padding: 10px 16px;
   display: flex;
   align-items: center;
@@ -22,6 +23,7 @@ export const UserInfo = styled.div`
     border-radius: 50%;
     margin-right: 10px;
     min-width: fit-content;
+    
   }
 `;
 
@@ -29,28 +31,32 @@ export const NameContent = styled.div`
   display: grid;
 `;
 
+// Nome da pessoa
 export const Name = styled.span`
   font-size: 18px;
+  color: white;
+  width: 200px;
   overflow: hidden;
   text-overflow: ellipsis;
 `;
 
+// Foto de perfil da conversa
 export const Avatar = styled.img`
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-  min-width: fit-content;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  margin-right: 20px;
+
 `;
 
+// Icones de pesquisa e configs
 export const Options = styled.div`
   display: flex;
   gap: 10px;
-
   svg {
     width: 24px;
     height: 24px;
-    color: #54656f;
     cursor: pointer;
+    color: #F72585;
   }
 `;

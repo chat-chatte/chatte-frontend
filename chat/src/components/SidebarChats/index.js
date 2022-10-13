@@ -25,7 +25,6 @@ const SidebarChats = ({ setUserChat, userChat }) => {
             setUserChat={setUserChat}
             active={userChat?.chatId === item.id ? "active" : ""}
           />
-          <C.Divider />
         </C.Content>
       ))}
     </C.Container>
