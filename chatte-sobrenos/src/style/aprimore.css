@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --cyan: #5CE1E6;
+    --blue: #38B6FF;
+    --pink: #D88B92;
+    --off-white: #F2F2F2;
+    --pure-black: #000000;
+    --pure-black-transparent: #000000b2;
+    --dark-color: #333333;
+    --btn-green: #27AE60;
+    --font-defaut: 'Inter', monospace;
+    --font-dark-color: #2C2C2C;
+    --purple: #5662B7;
+    --light-color: #f2f2f2;
+    --light-color-2: #6E6E6E;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+/* PARTE DA NAV */
+header {
+    background-color: var(--font-dark-color);
+    position: relative;
+}
+
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+}
+
+.nav-link {
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.login-button{
+    transition: 0.5s;
+}
+
+.login-button button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: var(--light-color);
+}
+
+.login-button button a {
+    text-decoration: none;
+    color: var(--light-color-2);
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+.login-button:hover{
+    filter: opacity(0.5);
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.nav-link:hover, .nav-link:focus{
+    color: #FFC200;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+    .nav-item {
+        display: none;
+    }
+    .login-button {
+        display: none;
+    }
+    .mobile-menu-icon {
+        display: block;
+    }
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+        transition: 0.5s;
+    }
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+    .open {
+        display: block;
+    }
+}
+
+/* PARTE APRIMORE SUA COMUNICAÇÃO */
+
+#aprimore {
+    /* width: 100%; */
+    /* height: 100vh; */
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+#textMeio {
+    display: flexbox;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    align-self: center;
+    margin-left: 340px;
+    margin-top: 70px;
+}
+
+#textMeio h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--pure-black);
+    
+}
+
+#textMeio h5 {
+    width: 40rem;
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--pure-black);
+    
+    
+}
+
+#livrese {
+    margin-top: 20px;
+}
+
+#textAprimore {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 70px;
+}
+
+#box{
+    width: 20vw;
+    height: 10vh;
+    /* display: flexbox;
+    align-items: center;
+    justify-content: center; */
+}
+
+#box h1{
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--pure-black);
+    text-align: center;
+}
+
+#box h5{
+    font-size: 14px;
+    font-weight: bold;
+    color: var(--pure-black);
+    text-align: center;
+    margin-top: 10px;
+}
+
+#btnSaiba {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18vw;
+    height: 7vh;
+    background-color: rgba(217, 217, 217, 0.2);
+    border: 1px solid var(--pure-black);
+    font-size: 15px;
+    font-weight: 550;
+    border-radius: 4px;
+    margin-top: 120px;
+    margin-left: 550px;
+    box-shadow: 1px 1px 5px gray;
+    transition: 0.7s;
+    margin-bottom: 220px;
+}
+
+#btnSaiba a{
+    color: var(--pure-black);
+    text-decoration: none;
+}
+
+#btnSaiba:hover{
+    background-color: rgba(217, 217, 217, 1);
+    height: 8vh;
+}
+
+/* PARTE ADICIONAR A CHATTE  */
+
+#adicionar {
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 100px;
+}
+
+#adicionar h1{
+    width: 40vw;
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+
+#listPassos{
+    font-size: 25px;
+    font-weight: bolder;
+    color: var(--pure-black);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    margin-bottom: 30px;
+}
+
+#listPassos img{
+    width: 30px;
+}
+
+#listPassos li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#btnAdicione{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    height: 7vh;
+    background-color: rgba(217, 217, 217, 0.2);
+    border: 1px solid var(--pure-black);
+    font-size: 15px;
+    font-weight: 550;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px gray;
+    transition: 0.7s;
+    margin-bottom: 200px;
+}
+
+#btnAdicione:hover{
+    background-color: rgba(217, 217, 217, 1);
+    height: 8vh;
+}
+
+#btnAdicione a{
+    color: var(--pure-black);
+    text-decoration: none;
+}
+
+#perguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 150px;
+}
+
+#perguntas h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--pure-black);
+    margin-bottom: 70px;
+}
+
+#caixaPerguntas{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    background-color: #D9D9D9;
+    width: 800px;
+    height: 50px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+}
+
+/* PARTE CONTAINER FOOTER */
+
+#footer{
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    background-color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#footer h1{
+    color: var(--light-color);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#copyright {
+    color: var(--light-color);
+    font-weight: bold;
+}
+
+#footer h5{
+    color: var(--light-color);
+    font-size: 16px;
+    
+}

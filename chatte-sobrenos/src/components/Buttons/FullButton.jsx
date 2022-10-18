@@ -13,6 +13,8 @@ export default function FullButton({ title, action, border }) {
   );
 }
 
+
+
 const Wrapper = styled.button`
   border: 1px solid ${(props) => (props.border ? "#F72585" : "#F72585")};
   background-color: ${(props) => (props.border ? "transparent" : "#F72585")};

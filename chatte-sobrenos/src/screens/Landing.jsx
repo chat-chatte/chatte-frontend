@@ -9,7 +9,7 @@ import Feedback from "../components/Sections/Feedback";
 export default function Landing() {
   return (
     <>
-      <TopNavbar />
+      <TopNavbar/>
       <Services />
       <Feedback />
       <Pricing />
