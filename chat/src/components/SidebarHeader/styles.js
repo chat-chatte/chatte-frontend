@@ -1,10 +1,11 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  height: 59px;
+  height: 120px;
   background-color: #2c2c2c;
   padding: 10px 16px;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: space-between;
   border-bottom: 2px solid #3a3a3a;
@@ -12,8 +13,8 @@ export const Container = styled.div`
 `;
 
 export const Avatar = styled.img`
-  width: 35px;
-  height: 35px;
+  width: 65px;
+  height: 65px;
   cursor: pointer;
   border-radius: 50%;
 `;
@@ -29,3 +30,11 @@ export const Options = styled.div`
     cursor: pointer;
   }
 `;
+
+export const Status = styled.select`
+outline: none;
+border-radius: 6px;
+padding: 2px
+
+`;
+

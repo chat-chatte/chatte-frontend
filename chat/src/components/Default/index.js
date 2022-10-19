@@ -9,8 +9,7 @@ const Default = () => {
       <Logo />
       <C.Title>CHATTE</C.Title>
       <C.Info>
-        Agora você pode enviar e receber mensagens sem precisar manter seu
-        celular conectado à internet.
+        Converse com suas equipes através da CHATTE.
       </C.Info>
     </C.Container>
   );

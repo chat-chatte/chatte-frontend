@@ -43,11 +43,12 @@ const SidebarHeader = ({ setUserChat }) => {
         src={"https://cdn-icons-png.flaticon.com/512/147/147142.png"}
         onClick={() => [auth.signOut(), setUserChat(null)]}
       />
-      <C.Options>
-        <MdDonutLarge />
-        <MdChat onClick={handleCreateChat} />
-        <MdMoreVert />
-      </C.Options>
+        <C.Status>
+        <option value="disponivel">Disponível</option>
+        <option value="ausente">Ausente</option>
+        <option selected value="ocupado">Ocupado</option>
+        <option value="offline">Offline</option>
+      </C.Status>
     </C.Container>
   );
 };
