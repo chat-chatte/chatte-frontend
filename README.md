@@ -22,4 +22,5 @@ Instalar o yarn
 - Index grupo CHATTE
 - Front-end do chat
 
-![Logo](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/th5xamgrr6se0x5ro4g6.png)
+
+![black_side](https://user-images.githubusercontent.com/84856203/196686408-5c8edfbe-040c-43d2-920e-f4baf15db8df.png)
