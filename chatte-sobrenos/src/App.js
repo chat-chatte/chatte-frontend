@@ -9,6 +9,8 @@ import Aprimore from "./screens/Aprimore.jsx";
 import Index from "./screens/Index.jsx";
 import Login from "./screens/Login.jsx";
 import Cadastro from "./screens/Cadastro.jsx";
+import './style/aprimore.css';
+
 
 export default function App() {
   return (
