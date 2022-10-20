@@ -3,7 +3,7 @@ import React from "react";
 import logoChatteBranca from '../assets/img/chattelogobranca.png';
 import imgMenu from '../assets/img/menu_white_36dp.svg';
 import imgBg from '../assets/img/image bg.png';
-
+import { Link } from "react-router-dom";
 
 function NavBarIndex() {
     return(
@@ -14,13 +14,13 @@ function NavBarIndex() {
       <header>
         <nav className="nav-bar">
           <div className="logo">
-            <img src={logoChatteBranca} alt="Logo"/>
+          <Link to="/"> <img src={logoChatteBranca} alt="Logo"/></Link>
           </div>
           <div className="nav-list">
               <ul>
-                  <li className="nav-item"><a href="#" className="nav-link">Início</a></li>
-                  <li className="nav-item"><a href="#" className="nav-link">Funções</a></li>
-                  <li className="nav-item"><a href="#" className="nav-link">Comunicação</a></li>
+                  <Link to="/valores" > <li className="nav-item"><a href="#" className="nav-link">Início</a></li> </Link>
+                  <Link to="/aprimore" > <li className="nav-item"><a href="#" className="nav-link">Funções</a></li> </Link>
+                  <Link to="/landing" > <li className="nav-item"><a href="#" className="nav-link">Comunicação</a></li> </Link>
                   <li className="nav-item"><a href="#" className="nav-link">Salas</a></li>
                   <li className="nav-item"><a href="#" className="nav-link">Conheça</a></li>
                   <li className="nav-item"><a href="#" className="nav-link">Baixe Agora</a></li>
