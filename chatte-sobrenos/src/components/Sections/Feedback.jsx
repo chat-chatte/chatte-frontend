@@ -6,7 +6,7 @@ export default function Feedback() {
   return (
     <Wrapper id="blog">
       <div className="whiteBg">
-        <div className="container">
+        <div >
           <HeaderInfo>
             <h1 className="font40 extraBold">Aqui, a comunicação importa</h1>
             <p className="font16">

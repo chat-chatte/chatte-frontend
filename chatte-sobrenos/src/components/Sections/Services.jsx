@@ -9,7 +9,7 @@ export default function Services() {
   return (
     <Wrapper id="services">
       <div className="whiteBg" style={{ padding: "60px 0" }}>
-        <div className="container">
+        <div>
           <HeaderInfo>
             <h1 className="font40 extraBold">Somos a CHATTE</h1>
             <p className="font16 extraBold">
