@@ -17,14 +17,14 @@ function NavBar() {
                   <Link to="/" > <li className="nav-item"><a href="#" className="nav-link">Inicio</a></li> </Link>
                   <Link to="/valores" > <li className="nav-item"><a href="#" className="nav-link">Valores</a></li> </Link>
                   <Link to="/aprimore" > <li className="nav-item"><a href="#" className="nav-link">Aprimore</a></li> </Link>
-                  <Link to="/login" > <li className="nav-item"><a href="#" className="nav-link">Faça seu Login</a></li> </Link>                  
-                  <Link to="/cadastro" > <li className="nav-item"><a href="#" className="nav-link">Cadastro</a></li> </Link> 
+                  <Link to="/somos" > <li className="nav-item"><a href="#" className="nav-link">Quem somos</a></li> </Link>                                    
               </ul>
           </div>
+          <Link to="/cadastro" > 
           <div className="login-button">
-              <button><a href="#">Fale Conosco</a></button>
+              <button><a href="#">Cadastro</a></button>
           </div>
-  
+          </Link> 
           <div className="mobile-menu">
             <ul>
               <li className="nav-item"><a href="#" className="nav-link">Início</a></li>

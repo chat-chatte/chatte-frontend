@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --cyan: #5CE1E6;
     --blue: #38B6FF;
@@ -61,7 +62,7 @@ header {
     transition: 0.5s;
 }
 
-.login-button{
+.login-button {
     transition: 0.5s;
 }
 
@@ -79,7 +80,7 @@ header {
     font-size: 1.1rem;
 }
 
-.login-button:hover{
+.login-button:hover {
     filter: opacity(0.5);
 }
 
@@ -91,147 +92,85 @@ header {
     display: none;
 }
 
-.nav-link:hover, .nav-link:focus{
+.nav-link:hover,
+.nav-link:focus {
     color: #FFC200;
 }
 
-@media screen and (max-width: 730px) {
-    .nav-bar {
-        padding: 1.5rem 4rem;
-    }
-    .nav-item {
-        display: none;
-    }
-    .login-button {
-        display: none;
-    }
-    .mobile-menu-icon {
-        display: block;
-    }
-    .mobile-menu-icon button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-    }
-    .mobile-menu ul {
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        padding-bottom: 1rem;
-    }
-    .mobile-menu .nav-item {
-        display: block;
-        padding-top: 1.2rem;
-    }
-    .mobile-menu .login-button {
-        display: block;
-        padding: 1rem 2rem;
-        transition: 0.5s;
-    }
-    .mobile-menu .login-button button {
-        width: 100%;
-    }
-    .open {
-        display: block;
-    }
-}
 
-#valores {
-    /* width: 100%; */
-    /* height: 100vh; */
+.valores {
+    width: 100%;
     background-color: white;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#textMeio {
+.nossos-valores {
+    height: 100px;
+    display: flex;
+    padding-left: 7%;
+    padding-top: 8%;
+    margin-bottom: 7%;
+    font-size: 30px;
+    width: 100%;
+}
+
+.enfase{
+    color: #F72585;
+}
+
+.textValores {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    align-self: center;
-    
+    justify-content: space-around;
+    height: 210px;
+    width: 100%;
 }
 
-#textMeio h1{
-    font-size: 50px;
-    font-weight: bold;
-    color: #2C2C2C;
+.box {
+    width: 20%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1%;
+    border-radius: 5px;
     text-align: center;
-    margin-right: 340px;
-}
-
-#textMeio h5 {
-    width: 40rem;
-    font-size: 16px;
+    color: white;
     font-weight: bold;
-    color: #2C2C2C;
-    
-    
-}
-
-#livrese {
-    margin-top: 20px;
-}
-
-#textValores {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 70px;
-}
-
-#boxValor{
-    width: 20vw;
-    height: 25vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: #2C2C2C;
+    box-shadow: 4px -1px 6px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
 }
 
-#box h1{
-    font-size: 20px;
-    font-weight: bold;
-    color: #2C2C2C;
-    text-align: center;
+.box h1 {
+    font-size: 24px;
+    margin-bottom: 3%;
 }
 
-#box h5{
+.box h5 {
     font-size: 14px;
+}
+
+#destaque {
+    color: #F72585;
     font-weight: bold;
-    color: #2C2C2C;
-    text-align: center;
-    margin-top: 10px;
+    font-size: 40px;
 }
 
-#funciona {
-    /* width: 100%; */
-    /* height: 100vh; */
-    background-color: white;
-    justify-content: center;
-    align-items: center;
-    margin-top: 200px;
-    margin-bottom: 200px;
+#pronto {
+    font-size: 40px;
+    font-weight: bold;
+    color: #FFC200;
 }
 
-#textFunciona {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 70px;
-}
 
-#funcionaMeio {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    align-self: center;
-    margin-top: 70px;
-}
-
-#btnCadastrar{
+#btnCadastrar {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,37 +183,30 @@ header {
     border-radius: 4px;
     box-shadow: 1px 1px 5px gray;
     transition: 0.7s;
-} 
+}
 
-#btnCadastrar:hover{
+#btnCadastrar:hover {
     background-color: rgba(217, 217, 217, 1);
     height: 8vh;
 }
 
-#btnCadastrar a{
+#btnCadastrar a {
     color: var(--pure-black);
     text-decoration: none;
 }
 
-#imgLogoPreta {
-    display: flex;
-    justify-content: space-evenly;
-    margin-left: 90px;
-}
-
-#imgLogoPreta img{
-    /* width: 70%; */
-}
 
 #baixo {
+    height: 500px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    margin-bottom: 250px;
+    padding-right: 5%;
+    padding-left: 6%;
 }
 
-#textFinal{
+#textFinal {
     width: 300px;
     height: 10px;
     display: flex;
@@ -285,7 +217,6 @@ header {
 #containerFinal {
     display: flex;
     justify-content: space-evenly;
-    /* align-items: start; */
     flex-direction: column;
     margin-right: 80px;
 }
@@ -296,15 +227,16 @@ header {
     font-size: 15px;
 }
 
-#containerFinal h5{
+#containerFinal h5 {
     margin-top: 30px;
 }
 
-#containerFinal h5, h6{
+#containerFinal h5,
+h6 {
     font-size: 15px;
 }
 
-#footer{
+#footer {
     position: relative;
     width: 100%;
     height: 20vh;
@@ -314,7 +246,7 @@ header {
     justify-content: space-around;
 }
 
-#footer h1{
+#footer h1 {
     color: var(--light-color);
     font-size: 1.0rem;
     font-weight: bold;
@@ -325,8 +257,59 @@ header {
     font-weight: bold;
 }
 
-#footer h5{
+#footer h5 {
     color: var(--light-color);
     font-size: 1.0rem;
-    
+
+}
+
+
+@media screen and (max-width: 730px) {
+    .nav-bar {
+        padding: 1.5rem 4rem;
+    }
+
+    .nav-item {
+        display: none;
+    }
+
+    .login-button {
+        display: none;
+    }
+
+    .mobile-menu-icon {
+        display: block;
+    }
+
+    .mobile-menu-icon button {
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-menu ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item {
+        display: block;
+        padding-top: 1.2rem;
+    }
+
+    .mobile-menu .login-button {
+        display: block;
+        padding: 1rem 2rem;
+        transition: 0.5s;
+    }
+
+    .mobile-menu .login-button button {
+        width: 100%;
+    }
+
+    .open {
+        display: block;
+    }
 }
