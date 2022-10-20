@@ -15,8 +15,8 @@ function NavBar() {
           <div className="nav-list">
               <ul>
                   <Link to="/" > <li className="nav-item"><a href="#" className="nav-link">Inicio</a></li> </Link>
-                  <Link to="/valores" > <li className="nav-item"><a href="#" className="nav-link">Valores</a></li> </Link>
-                  <Link to="/aprimore" > <li className="nav-item"><a href="#" className="nav-link">Aprimore</a></li> </Link>
+                  <Link to="/valores" > <li className="nav-item"><a href="#" className="nav-link">Nossos valores</a></li> </Link>
+                  <Link to="/aprimore" > <li className="nav-item"><a href="#" className="nav-link">Nossa tecnologia</a></li> </Link>
                   <Link to="/somos" > <li className="nav-item"><a href="#" className="nav-link">Quem somos</a></li> </Link>                                    
               </ul>
           </div>

@@ -7,20 +7,29 @@ function SectionFuncoes () {
 
         <>
             <div  id="funcoes">
-          <h1 id="textFunc">Funções
+          <h1 id="textFunc">Funções <br/>
             da <span style={{color: "#FFC200"}}>CHATTE</span></h1>
-            <div id="listFuncoesDir">
-              <ul style={{listStyle: "none"}}>
-                <li > <img src={check} alt=""/>Agendas e organização</li>
-                <li > <img src={check} alt=""/>Facilitação de avisos</li>
-              </ul>              
+            <div>
+              <div className="checklist">
+            <img src={check} alt=""/>
+            <h2>Agendas e organização</h2>
+              </div>
+              <div className="checklist">
+            <img src={check} alt=""/>
+            <h2>Facilitação de avisos</h2>
+              </div> 
             </div>
-            <div id="listFuncoesEsq">
-              <ul style={{listStyle: "none"}}>
-                <li > <img src={check} alt=""/>Chats de voz, vídeo e texto</li>
-                <li > <img src={check} alt=""/>Grupos organizados</li>
-              </ul>
+            <div>
+              <div className="checklist">
+            <img src={check} alt=""/>
+            <h2>Chats de voz, vídeo e texto</h2>
+              </div>
+              <div className="checklist">
+            <img src={check} alt=""/>
+            <h2>Grupos organizado</h2>
+              </div> 
             </div>
+
         </div>
         </>
 
