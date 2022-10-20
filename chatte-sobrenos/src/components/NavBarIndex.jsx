@@ -18,12 +18,12 @@ function NavBarIndex() {
           </div>
           <div className="nav-list">
               <ul>
-                  <Link to="/valores" > <li className="nav-item"><a href="#" className="nav-link">Início</a></li> </Link>
-                  <Link to="/aprimore" > <li className="nav-item"><a href="#" className="nav-link">Funções</a></li> </Link>
-                  <Link to="/landing" > <li className="nav-item"><a href="#" className="nav-link">Comunicação</a></li> </Link>
-                  <li className="nav-item"><a href="#" className="nav-link">Salas</a></li>
-                  <li className="nav-item"><a href="#" className="nav-link">Conheça</a></li>
-                  <li className="nav-item"><a href="#" className="nav-link">Baixe Agora</a></li>
+                  <Link to="/" > <li className="nav-item"><a href="#" className="nav-link">Inicio</a></li> </Link>
+                  <Link to="/valores" > <li className="nav-item"><a href="#" className="nav-link">Valores</a></li> </Link>
+                  <Link to="/aprimore" > <li className="nav-item"><a href="#" className="nav-link">Aprimore</a></li> </Link>
+                  <Link to="/somos" > <li className="nav-item"><a href="#" className="nav-link">Quem somos</a></li> </Link>                  
+                  <Link to="/login" > <li className="nav-item"><a href="#" className="nav-link">Faça seu Login</a></li> </Link>                  
+                  <Link to="/cadastro" > <li className="nav-item"><a href="#" className="nav-link">Cadastro</a></li> </Link>                    
               </ul>
           </div>
           <div className="login-button">
