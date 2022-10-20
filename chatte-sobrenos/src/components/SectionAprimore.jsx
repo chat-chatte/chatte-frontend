@@ -27,8 +27,11 @@ function SectionAprimore () {
                         Sem problemas! Te mostramos com quem falar!</h5>
                 </div>
             </div>
+            <div id="containerButton">
             <div id="btnSaiba">
                 <a href="#">Saiba mais sobre a <span style={{color: "#FFC200"}}>CHATTE</span></a>
+            </div>
+
             </div>
           </div>
 
