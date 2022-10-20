@@ -48,8 +48,12 @@ export default function Feedback() {
 const Wrapper = styled.section`
   width: 100%;
   padding-top: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+
 `;
 const HeaderInfo = styled.div`
+padding-left: 1%;
   margin-bottom: 30px;
   @media (max-width: 860px) {
     text-align: center;

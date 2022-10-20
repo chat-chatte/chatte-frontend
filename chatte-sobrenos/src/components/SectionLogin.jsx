@@ -53,7 +53,7 @@ export const SectionLogin = () => {
             </div>
 
             <div className="container-bg-2">
-                <h1>Slogan da empresa</h1>
+            <h1>CONVERSE, REÚNA E SE ORGANIZE EM UM SÓ LUGAR</h1>
             </div>
 
         </div>

@@ -36,14 +36,14 @@ function SectionAprimore () {
           </div>
 
           <div id="adicionar">
-            <h1>Adicionar a <span style={{color: "#FFC200"}}>CHATTE</span>
-                a sua empresa é fácil</h1>
+            <h1>Adicionar a <span style={{color: "#FFC200"}}>CHATTE </span>
+                à sua empresa é fácil</h1>
                 <div id="listPassos">
                     <ul style={{listStyle: "none"}}>
-                        <li > <img src={check} alt=""/>Passo</li>
-                        <li > <img src={check} alt=""/>Passo</li>
-                        <li > <img src={check} alt=""/>Passo</li>
-                        <li > <img src={check} alt=""/>Passo</li>
+                        <li > <img src={check} alt=""/>Assine um plano</li>
+                        <li > <img src={check} alt=""/>Entre em contato</li>
+                        <li > <img src={check} alt=""/>Configure a CHATTE ao seu negócio</li>
+                        <li > <img src={check} alt=""/>Pronto!</li>
                       </ul> 
                 </div>
                 <div id="btnAdicione">
@@ -51,13 +51,7 @@ function SectionAprimore () {
                 </div>
           </div>
 
-          <div id="perguntas">
-            <h1>Perguntas Frequentes</h1>
-            <div id="caixaPerguntas"></div>
-            <div id="caixaPerguntas"></div>
-            <div id="caixaPerguntas"></div>
-            <div id="caixaPerguntas"></div>
-          </div>
+
         </>
 
     );

@@ -11,6 +11,12 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background-color: yellow;
+}
+.container-teste{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container-login{
@@ -40,14 +46,14 @@
 
 
 .container-bg h1 {
-    color: black;
-    font-size: 6rem;
+    color: #2C2C2C;
+    font-size: 3rem;
     margin: 10%;
 }
 
 .container-bg-2 h1 {
     color:white;
-    font-size: 6rem;
+    font-size: 3rem;
     margin: 10%;
 }
 
@@ -61,8 +67,7 @@
 }
 
 .wrap-login {
-    width: 100%;
-    height: 110vh;
+    height: 100vh;
     background-color: #2C2C2C;
     overflow: hidden;
     padding: 77px 55px 33px 55px;
@@ -89,6 +94,9 @@
     text-align: center;
     margin: 0.9rem;
 }
+.logo img{
+    height: 70px;
+}
 
 .login-form-title {
     display: flex;
@@ -107,7 +115,7 @@
     align-items: center;
     justify-content: center;
     font-size: 1.8rem;
-    color: black;
+    color: #2C2C2C;
     font-weight: 700;
     line-height: 1.2;
     text-align: center;
@@ -155,7 +163,7 @@
     top: 0;
     left: 0;
     pointer-events: none;
-    color: black;
+    color: #2C2C2C;
 }
 
 
@@ -179,7 +187,7 @@
 
 .focus-input-2::after {
     font-size: .9rem;
-    color: black;
+    color: #2C2C2C;
     font-weight: bold;
     line-height: 1.2;
     content: attr(data-placeholder);
@@ -221,7 +229,7 @@
     font-size: 1rem;
     border: none;
     border-radius: .2rem;
-    color: black;
+    color: #2C2C2C;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 700;
@@ -230,7 +238,7 @@
     justify-content: center;
     width: 100%;
     height: 50px;
-    background-color: yellow;
+    background-color: #FFC200;
     
 
 }
@@ -254,19 +262,19 @@
 .txt-1-2,
 .txt-2-2 {
     font-size: .9rem;
-    color: black;
+    color: #2C2C2C;
     line-height: 1.5;
 
 }
 
 .txt-2 {
-    color: yellow;
+    color: #FFC200;
     text-decoration: none;
     margin-left: .3rem;
 }
 
 .txt-2-2 {
-    color: black;
+    color: #2C2C2C;
     text-decoration: none;
     margin-left: 20.0rem;
     font-weight: bold;

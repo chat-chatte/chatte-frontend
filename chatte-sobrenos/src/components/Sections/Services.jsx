@@ -52,6 +52,8 @@ export default function Services() {
 }
 
 const Wrapper = styled.section`
+padding-left: 10%;
+padding-right: 10%;
   width: 100%;
   margin-top: 50px;
 `;
@@ -76,6 +78,7 @@ const ServiceBoxWrapper = styled.div`
   }
 `;
 const HeaderInfo = styled.div`
+padding-left: 1%;
   @media (max-width: 860px) {
     text-align: center;
   }

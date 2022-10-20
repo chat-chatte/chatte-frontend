@@ -7,7 +7,7 @@ export default function Pricing() {
   return (
     <Wrapper id="pricing">
       <div className="whiteBg">
-        <div className="container">
+        <div >
           <HeaderInfo>
             <h1 className="font40 extraBold">Nossos planos</h1>
             <p className="font13">
@@ -78,12 +78,16 @@ const Wrapper = styled.section`
   padding: 50px 0;
 `;
 const HeaderInfo = styled.div`
+  padding-left: 10%;
   margin-bottom: 30px;
   @media (max-width: 860px) {
     text-align: center;
   }
 `;
 const TablesWrapper = styled.div`
+  padding-left: 10%;
+  padding-right: 10%;
+
   @media (max-width: 860px) {
     flex-direction: column;
   }

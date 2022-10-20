@@ -11,7 +11,7 @@ export const SectionCadastro = () => {
 
 
     return (
-        <div className="container">
+        <div className="container-teste">
 
             <div className="container-login">
                 <div className="wrap-login">
@@ -74,7 +74,7 @@ export const SectionCadastro = () => {
             </div>
 
             <div className="container-bg">
-                <h1>SLOGAN DA EMPRESA</h1>
+                <h1>CONVERSE, REÚNA E SE ORGANIZE EM UM SÓ LUGAR</h1>
             </div>
         </div>
     );
