@@ -7,8 +7,11 @@ export const Container = styled.div`
   padding: 15px 20px;
   cursor: pointer;
   color: #2c2c2c;
+  margin-top: 1%;
+  margin-left: 10px;
   &:hover {
     background-color: #2c2c2c;
+    border-radius: 10px;
     color: white;
   }
 
@@ -23,6 +26,7 @@ export const Container = styled.div`
 
   &.active {
     background-color: #2c2c2c;
+    border-radius: 10px;
     color: #FFC200; 
   }
 `;
