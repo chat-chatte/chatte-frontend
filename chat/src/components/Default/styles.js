@@ -26,3 +26,19 @@ export const Info = styled.span`
   text-align: center;
   max-width: 500px;
 `;
+
+export const Form = styled.form`
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+`;
+
+export const Input = styled.input`
+  padding: 10px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  box-shadow: inset 0 0 1px 1px #0003;
+`;
