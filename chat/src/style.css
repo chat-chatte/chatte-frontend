@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+
+  display: flex;
+  border-bottom: 1px solid black;
+  align-items: center;
+  justify-content: space-evenly;
+  box-sizing: border-box;
+  padding-left: 1%;
+  padding-right: 1%;
+
+  height: 80px;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.notification{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.company-name {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 1%;
+  width: 12%;
+
+  height: auto;
+}
+.body-container{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.company-name h1 {
+  font-weight: 800;
+  color: white;
+}
+
+.tablist {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 2%;
+  height: 100%;
+  width: 70.9vw;
+  margin-right: 4.4%;
+}
+
+.icon-house {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 118px;
+  height: 40px;
+}
+
+.icon-house p {
+  color: white;
+  font-weight: 500;
+}
+#chat{
+  width: 88px;
+}
+#configuration{
+  width: 168px;
+}
+.user{
+ padding: 1%;
+ color: white;
+ width: 150px;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+}

@@ -1,34 +1,76 @@
-import React, { useEffect, useState } from "react";
-import Chat from "./components/Chat";
-import Sidebar from "./components/Sidebar";
-import * as C from "./styles/app";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth, db } from "./services/firebase";
-import Login from "./components/Login";
-import Loading from "./components/Loading";
-
+import React from "react";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "./style.css";
+import Sidebar from "./components/sidebar/Sidebar";
+import ChatFeed from "./components/chatFeed/ChatFeed";
 const App = () => {
-  const [user, loading] = useAuthState(auth);
-  const [userChat, setUserChat] = useState(null);
-
-  useEffect(() => {
-    if (user) {
-      db.collection("users").doc(user.uid).set({
-        email: user.email,
-        photoURL: user.photoURL,
-      });
-    }
-  }, [user]);
-
-  if (loading) return <Loading />;
-
-  if (!user) return <Login />;
-
   return (
-    <C.Container>
-      <Sidebar setUserChat={setUserChat} userChat={userChat} />
-      <Chat userChat={userChat} />
-    </C.Container>
+    <div>
+      <Tabs>
+        <div className="container">
+          <div className="company-name">
+            <h1>CHATTE</h1>
+          </div>
+          <TabList className={"tablist"}>
+            <Tab>
+              <div id="chat" className="icon-house">
+                <img src={require("./components/imgs/chat-icon.png")} />
+                <p>Chat</p>
+              </div>
+            </Tab>
+
+            <Tab>
+              <div className="icon-house">
+                <img src={require("./components/imgs/dashboard-icon.png")} />
+                <p>Resumo</p>
+              </div>
+            </Tab>
+
+            <Tab>
+              <div className="icon-house">
+                <img src={require("./components/imgs/contatos.png")} />
+                <p>Contatos</p>
+              </div>
+            </Tab>
+
+            <Tab>
+              <div className="icon-house" id="configuration">
+                <img src={require("./components/imgs/config-icon.png")} />
+                <p>Configurações</p>
+              </div>
+            </Tab>
+
+            <Tab>
+              <div className="icon-house" >
+                <img src={require("./components/imgs/bell.png")} />
+              </div>
+            </Tab>
+          </TabList>
+        </div>
+        <div className="body-container">
+          <Sidebar></Sidebar>
+          <TabPanel>
+            <ChatFeed />
+          </TabPanel>
+
+          <TabPanel>
+            <h2> 2</h2>
+          </TabPanel>
+
+          <TabPanel>
+            <h2> 3</h2>
+          </TabPanel>
+
+          <TabPanel>
+            <h2> 4</h2>
+          </TabPanel>
+
+          <TabPanel>
+            <h2> 5</h2>
+          </TabPanel>
+        </div>
+      </Tabs>
+    </div>
   );
 };
 

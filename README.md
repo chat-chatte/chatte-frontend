@@ -21,6 +21,7 @@ Instalar o yarn
 
 - Index grupo CHATTE
 - Front-end do chat
+- Node versão 16.16
 
 
 ![black_side](https://user-images.githubusercontent.com/84856203/196686408-5c8edfbe-040c-43d2-920e-f4baf15db8df.png)

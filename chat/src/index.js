@@ -1,12 +1,7 @@
-import { createRoot } from "react-dom/client";
-import App from "./App";
-import GlobalStyle from "./styles/global";
+import React from 'react'
+import ReactDOM from 'react-dom'
+import App from './App'
 
-const root = createRoot(document.querySelector("#root"));
-
-root.render(
-  <>
-    <App />
-    <GlobalStyle />
-  </>
-);
+ReactDOM.render(
+  <App/>, document.getElementById('root')
+)
