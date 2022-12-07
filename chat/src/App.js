@@ -3,9 +3,11 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "./style.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
+
 const App = () => {
   return (
     <div>
+    
       <Tabs>
         <div className="container">
           <div className="company-name">

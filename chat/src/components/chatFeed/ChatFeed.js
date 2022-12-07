@@ -1,23 +1,13 @@
 import React from "react";
+import TesteHover from "../teste/Hover";
+import Message from "../message/Message";
 import "./chat.css"
 const ChatFeed = () => {
   return (
     <div className="chat-container">
-      <div className="chat-header">
-        <div className="user-chat">
-          <div className="user-profile">
-
-          </div>
-              <h3>User</h3>
-        </div>
-
-        <div className="options-chat">
-        <img src={require('../imgs/ligar.png')} />
-        <img src={require('../imgs/anexo.png')} />
-        </div>
-      </div>
+        <TesteHover></TesteHover>
       <div className="chat-feed">
-
+      <Message></Message>
       </div>
       <div className="send-message">
           <textarea placeholder="Escreva sua mensagem...">
