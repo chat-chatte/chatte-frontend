@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef }  from "react";
 import TesteHover from "../teste/Hover";
 import Message from "../message/Message";
-import "./chat.css"
 import * as SockJS from 'sockjs-client';
 import * as Stomp from '@stomp/stompjs';
 import api from "../../api";

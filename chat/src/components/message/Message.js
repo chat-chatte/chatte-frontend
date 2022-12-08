@@ -1,5 +1,4 @@
 import React from "react";
-import "./mensagem.css"
 
 const Message = (props) => {
   return (
