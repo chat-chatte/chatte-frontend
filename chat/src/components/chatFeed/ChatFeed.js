@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef }  from "react";
-import TesteHover from "../teste/Hover";
+import {BsCursorFill} from "react-icons/bs";
 import Message from "../message/Message";
-import "./chat.css"
 import * as SockJS from 'sockjs-client';
 import * as Stomp from '@stomp/stompjs';
 import api from "../../api";
@@ -36,7 +35,7 @@ const ChatFeed = () => {
 
     const sendMessage = (event) => {
       event.preventDefault();
-      stompClient.send(`/app/message/${3}`, {}, JSON.stringify({'conteudo': document.getElementById('message').value, 'privado': true, 'fkUsuario': 3, 'fkGrupo': 3}));
+      stompClient.send(`/app/message/${3}`, {}, JSON.stringify({'conteudo': document.getElementById('message').value, 'privado': true, 'fkUsuario': 4, 'fkGrupo': 3}));
     }
 
   return (
@@ -56,7 +55,9 @@ const ChatFeed = () => {
             <textarea id="message" placeholder="Escreva sua mensagem...">
             </textarea>
 
-            <button className="send-button" onClick={sendMessage}></button>
+            <button className="send-button" onClick={sendMessage}>
+              <BsCursorFill></BsCursorFill>
+            </button>
       </div>
     </div>
   </div>

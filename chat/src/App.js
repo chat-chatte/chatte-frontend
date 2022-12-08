@@ -5,6 +5,8 @@ import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
 import { useState } from "react";
 import VideCall from "./components/videocall/VideoCall";
+import {BsBell} from "react-icons/bs";
+import UserConfig from "./components/userconfig/UserConfig";
 
 import Message from "./components/message/Message";
 
@@ -64,6 +66,7 @@ const App = () => {
 
               <Tab>
                 <div className="icon-house">
+                  
                   <img src={require("./components/imgs/bell.png")} />
                 </div>
               </Tab>
@@ -83,12 +86,12 @@ const App = () => {
           <div className="body-container">
             
             <TabPanel>
-              <ChatFeed></ChatFeed>
-
+              <ChatFeed/>
+              {/* <VideCall/> */}
             </TabPanel>
 
             <TabPanel>
-              <VideCall/>
+             2
             </TabPanel>
 
             <TabPanel>
@@ -96,11 +99,11 @@ const App = () => {
             </TabPanel>
 
             <TabPanel>
-              <h2> 4</h2>
+            <UserConfig/>
             </TabPanel>
 
             <TabPanel>
-              <h2> 5</h2>
+              
             </TabPanel>
           </div>
         </Tabs>
