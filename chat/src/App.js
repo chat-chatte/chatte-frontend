@@ -1,13 +1,18 @@
 import React from "react";
+import { useEffect, useRef, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import Peer from "simple-peer"
+import io from "socket.io-client"
 import "./style.css";
+
+
 import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
-import { useState } from "react";
 import VideCall from "./components/videocall/VideoCall";
 
 import Message from "./components/message/Message";
 
+const socket = io.connect('http://localhost:5000')
 const App = () => {
   const [isHovering, setIsHovering] = useState(false);
 
@@ -18,6 +23,88 @@ const App = () => {
   const handleMouseOut = () => {
     setIsHovering(false);
   };
+
+  // FUNCIONAMENTO DO VIDEO
+  const [ me, setMe ] = useState("")
+	const [ stream, setStream ] = useState()
+	const [ receivingCall, setReceivingCall ] = useState(false)
+	const [ caller, setCaller ] = useState("")
+	const [ callerSignal, setCallerSignal ] = useState()
+	const [ callAccepted, setCallAccepted ] = useState(false)
+	const [ idToCall, setIdToCall ] = useState("")
+	const [ callEnded, setCallEnded] = useState(false)
+	const [ name, setName ] = useState("")
+	const myVideo = useRef()
+	const userVideo = useRef()
+	const connectionRef= useRef()
+
+  useEffect(() => {
+		navigator.mediaDevices.getUserMedia({ video: true, audio: true }).then((stream) => {
+			setStream(stream)
+				myVideo.current.srcObject = stream
+		})
+
+	socket.on("me", (id) => {
+			setMe(id)
+		})
+
+		socket.on("callUser", (data) => {
+			setReceivingCall(true)
+			setCaller(data.from)
+			setName(data.name)
+			setCallerSignal(data.signal)
+		})
+	}, [])
+
+	const callUser = (id) => {
+		const peer = new Peer({
+			initiator: true,
+			trickle: false,
+			stream: stream
+		})
+		peer.on("signal", (data) => {
+			socket.emit("callUser", {
+				userToCall: id,
+				signalData: data,
+				from: me,
+				name: name
+			})
+		})
+		peer.on("stream", (stream) => {
+			
+				userVideo.current.srcObject = stream
+			
+		})
+		socket.on("callAccepted", (signal) => {
+			setCallAccepted(true)
+			peer.signal(signal)
+		})
+
+		connectionRef.current = peer
+	}
+
+	const answerCall =() =>  {
+		setCallAccepted(true)
+		const peer = new Peer({
+			initiator: false,
+			trickle: false,
+			stream: stream
+		})
+		peer.on("signal", (data) => {
+			socket.emit("answerCall", { signal: data, to: caller })
+		})
+		peer.on("stream", (stream) => {
+			userVideo.current.srcObject = stream
+		})
+
+		peer.signal(callerSignal)
+		connectionRef.current = peer
+	}
+
+	const leaveCall = () => {
+		setCallEnded(true)
+		connectionRef.current.destroy()
+	}
 
   return (
     <div>
@@ -63,14 +150,27 @@ const App = () => {
               </Tab>
 
               <Tab>
-                <div className="icon-house">
+                <div className="icon-house" id="bell">
                   <img src={require("./components/imgs/bell.png")} />
                 </div>
               </Tab>
+
+              <Tab>
+                <div className="options-chat" id="phone">
+                <img src={require("./components/imgs/ligar.png")} />
+                </div>
+              </Tab>
+              
+              <Tab>
+                <div className="options-chat" id="attachment">
+                <img  src={require("./components/imgs/anexo.png")} />
+                </div>
+              </Tab>
+
             </TabList>
             <div className="options-chat">
-              <img src={require("./components/imgs/ligar.png")} />
-              <img src={require("./components/imgs/anexo.png")} />
+              
+              
             </div>
           </div>
 
@@ -84,11 +184,10 @@ const App = () => {
             
             <TabPanel>
               <ChatFeed></ChatFeed>
-
             </TabPanel>
 
             <TabPanel>
-              <VideCall/>
+              <h2> 2</h2>
             </TabPanel>
 
             <TabPanel>
@@ -101,6 +200,16 @@ const App = () => {
 
             <TabPanel>
               <h2> 5</h2>
+            </TabPanel>
+
+            <TabPanel>
+              <VideCall>
+
+              </VideCall>
+            </TabPanel>
+
+            <TabPanel>
+              <h2> 7</h2>
             </TabPanel>
           </div>
         </Tabs>
