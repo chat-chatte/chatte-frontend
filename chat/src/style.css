@@ -19,7 +19,7 @@ li {
   width: 75vw;
   background-color: var(--dark-blue);
   border-radius: 0px 0px 5px 5px !important;
-  height: 85vh;
+  height: 78vh;
 }
 
 .chat-feed {
@@ -143,9 +143,9 @@ li {
 .options-chat {
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  width: 15%;
-  padding-right: 5%;
+  justify-content: space-between;
+  padding-right: 2%;
+  width: 12%;
   height: 100%;
 }
 
@@ -178,8 +178,9 @@ li {
   overflow: hidden;
   overflow-y: hidden !important;
   display: flex;
-  width: 100vh;
-  width: 100vw;
+  width: 97vh;
+
+  width: 97vw;
 }
 .container {
   display: flex;
@@ -241,7 +242,7 @@ li {
   box-sizing: border-box;
   padding: 2%;
   height: 100%;
-  width: 70.9vw;
+  width: 100vw;
   margin-right: 4.4%;
 }
 
@@ -272,3 +273,5 @@ li {
   align-items: center;
   justify-content: space-around;
 }
+
+
