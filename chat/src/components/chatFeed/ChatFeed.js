@@ -1,19 +1,62 @@
-import React from "react";
+import React, { useState, useEffect, useRef }  from "react";
 import TesteHover from "../teste/Hover";
 import Message from "../message/Message";
 import "./chat.css"
-const ChatFeed = () => {
+import * as SockJS from 'sockjs-client';
+import * as Stomp from '@stomp/stompjs';
+import api from "../../api";
+
+function ChatFeed(){
+  const [messageList, setMessageList] = useState([]);
+  const [stompClient, setStompClient] = useState()
+
+    function connect() {
+      var socket = new SockJS('http://localhost:9090/websocket');
+      var stompClient = Stomp.Stomp.over(socket)
+      setStompClient(stompClient)
+      stompClient.connect({}, function() {
+        stompClient.subscribe(`/chatte/reply/${3}`, function (message) {
+          console.log(message.body);
+          getMessages()
+        })
+      })
+    }
+
+    function getMessages() {
+      api.get("/grupos/messages/3").then(res => {
+        setMessageList(res.data);
+      }).catch(erro => {
+        console.log(erro);
+      })
+    }
+    useEffect(() => {
+      connect()
+      getMessages()
+    }, [])
+
+    const sendMessage = (event) => {
+      event.preventDefault();
+      stompClient.send(`/app/message/${3}`, {}, JSON.stringify({'conteudo': document.getElementById('message').value, 'privado': true, 'fkUsuario': 3, 'fkGrupo': 3}));
+    }
+  
   return (
     <div className="chat-container">
         <TesteHover></TesteHover>
       <div className="chat-feed">
-      <Message></Message>
+        {
+          messageList.map(message => (
+            <Message
+              conteudo={message.conteudo}
+              nmUsuario={message.nmUsuario}
+            ></Message>
+          ))
+        }
       </div>
       <div className="send-message">
-          <textarea placeholder="Escreva sua mensagem...">
-            
-          </textarea>
-          <button className="send-button"></button>
+            <textarea id="message" placeholder="Escreva sua mensagem...">
+            </textarea>
+
+            <button className="send-button" onClick={sendMessage}></button>
       </div>
     </div>
   )
