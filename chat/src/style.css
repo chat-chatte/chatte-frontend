@@ -294,4 +294,54 @@ li {
   justify-content: space-around;
 }
 
+.video-call-container{
+  height: 88vh;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  display: flex;
+  box-sizing: border-box;
+  padding: 1%;
+  background-color: var(--darker);
+  width: 1024px;
+}
 
+.user-video{
+  border: 4px solid #373a4a;
+  height: 200px;
+  margin-top: 10px;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.controlls{
+  width: 1024px;
+  background-color: #20232B;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 80px;
+}
+.end-call{
+  outline: none;
+  border: none;
+  font-weight: bold;
+  padding: 1%;
+  border-radius: 5px;
+  color: white;
+  background-color: #EF5A5C;
+  height: 70%;
+}
+
+.controlls-options{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid #373a4a;
+  height: 70%;
+  width: 60px;
+  border-radius: 5px;
+}
+.controlls-options img {
+  height: 30px;
+}

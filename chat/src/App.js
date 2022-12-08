@@ -3,8 +3,8 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "./style.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
-import TesteHover from "./components/teste/Hover";
 import { useState } from "react";
+import VideCall from "./components/videocall/VideoCall";
 
 import Message from "./components/message/Message";
 
@@ -81,13 +81,14 @@ const App = () => {
           )}
 
           <div className="body-container">
+            
             <TabPanel>
               <ChatFeed></ChatFeed>
 
             </TabPanel>
 
             <TabPanel>
-              <h2> 2</h2>
+              <VideCall/>
             </TabPanel>
 
             <TabPanel>
