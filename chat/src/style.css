@@ -94,11 +94,14 @@ li {
 
 .chat-container ::-webkit-scrollbar  {
   background-color: var(--dark-blue);
+ 
 }
 
 .chat-container ::-webkit-scrollbar-thumb  {
   background-color: black;
+  border-radius: 10px;
 }
+
 
 
 
@@ -344,4 +347,159 @@ li {
 }
 .controlls-options img {
   height: 30px;
+}
+
+.config-container{
+  background-image: url(./components/imgs/rosa-chatte.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position-y: 90%;
+  background-position-x: 90%;
+  width: 75vw;
+  box-sizing: border-box;
+  padding-right: 1%;
+  height: 89vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.container-edit{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 40%;
+}
+.photo-change{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 800px;
+  padding: 2%;
+  height: 100px;
+}
+
+.disclaimer{
+  box-sizing: border-box;
+  padding: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: white;
+  border-radius: 5px;
+  width: 30%;
+  background-color: var(--destaque);
+  -webkit-box-shadow: 3px -1px 8px -3px #000000; 
+  box-shadow: 3px -1px 8px -3px #000000;
+}
+
+.buttons-profile{
+  height: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#edit-user-profile-photo{
+  height: 100px;
+  width: 100px;
+}
+
+.informacoes{
+  height: 100px;
+  width: 800px;
+  box-sizing: border-box;
+  margin-top: 2%;
+  padding-top: 1%;
+}
+
+
+.social-img{
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bolder;
+  font-size: 40px;
+  color: white;
+  margin-right: 1%;
+  background-color: #2B7BB6;
+  border-radius: 5px;
+}
+
+.aviso{
+  color: white;
+  margin-left: 1%;
+
+}
+
+#aviso-h1{
+  margin-top: 2%;
+}
+
+.social-img img {
+  height: 30px;
+}
+.icon-house img{
+  height: 20px;
+}
+
+.options-chat img{
+  height: 20px;
+}
+.display-social{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
+}
+.button-profile-edit{
+  cursor: pointer;
+  width: 200px;
+  -webkit-box-shadow: 3px 1px 16px -4px rgba(0,0,0,0.66); 
+  box-shadow: 3px 1px 16px -4px rgba(0,0,0,0.66);
+  font-weight: bold;
+  border: 3px solid #373a4a;
+  color: white;
+  background-color: var(--destaque);
+  padding: 4%;
+  border-radius: 5px;
+}
+
+#change-photo{
+  background-color: #B785F5;
+  color: white;
+}
+
+.search{
+  padding: 2%;
+  border: none;
+  outline: none;
+  color: white;
+  border-radius: 5px;
+  background-color: var(--darker);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.change-btn{
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  width: 20%;
+  background-color: #F72585;
+  color: white;
+  font-weight: bold;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  margin-left: 2%;
+}
+
+.informacoes h3{
+  color: white;
+  margin-bottom: 1%;
+  margin-left: 2%;
+}
+
+#redes{
+  margin-top: 4%;
 }
