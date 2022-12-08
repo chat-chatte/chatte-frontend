@@ -1,5 +1,8 @@
 import React from "react";
+<<<<<<< HEAD
 
+=======
+>>>>>>> 41bf28c7c5aa127941d2e5ba1de46e523e79679f
 
 const Message = (props) => {
   return (

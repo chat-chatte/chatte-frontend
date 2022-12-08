@@ -9,8 +9,10 @@ import "./style.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
 import VideCall from "./components/videocall/VideoCall";
+import {BsBell} from "react-icons/bs";
+import UserConfig from "./components/userconfig/UserConfig";
 
-import Message from "./components/message/Message";
+import Upload from "./components/upload/Upload";
 
 const socket = io.connect('http://localhost:5000')
 const App = () => {
@@ -150,12 +152,18 @@ const App = () => {
               </Tab>
 
               <Tab>
+<<<<<<< HEAD
                 <div className="icon-house" id="bell">
+=======
+                <div className="icon-house">
+                  
+>>>>>>> 41bf28c7c5aa127941d2e5ba1de46e523e79679f
                   <img src={require("./components/imgs/bell.png")} />
                 </div>
               </Tab>
 
               <Tab>
+<<<<<<< HEAD
                 <div className="options-chat" id="phone">
                 <img src={require("./components/imgs/ligar.png")} />
                 </div>
@@ -164,6 +172,10 @@ const App = () => {
               <Tab>
                 <div className="options-chat" id="attachment">
                 <img  src={require("./components/imgs/anexo.png")} />
+=======
+                <div className="icon-house" id="configuration">
+                  <p>Cadastro via arquivo</p>
+>>>>>>> 41bf28c7c5aa127941d2e5ba1de46e523e79679f
                 </div>
               </Tab>
 
@@ -183,11 +195,20 @@ const App = () => {
           <div className="body-container">
             
             <TabPanel>
+<<<<<<< HEAD
               <ChatFeed></ChatFeed>
             </TabPanel>
 
             <TabPanel>
               <h2> 2</h2>
+=======
+              <ChatFeed/>
+              {/* <VideCall/> */}
+            </TabPanel>
+
+            <TabPanel>
+             2
+>>>>>>> 41bf28c7c5aa127941d2e5ba1de46e523e79679f
             </TabPanel>
 
             <TabPanel>
@@ -195,12 +216,13 @@ const App = () => {
             </TabPanel>
 
             <TabPanel>
-              <h2> 4</h2>
+            <UserConfig/>
             </TabPanel>
 
             <TabPanel>
-              <h2> 5</h2>
+              
             </TabPanel>
+<<<<<<< HEAD
 
             <TabPanel>
               <VideCall>
@@ -211,6 +233,13 @@ const App = () => {
             <TabPanel>
               <h2> 7</h2>
             </TabPanel>
+=======
+       
+            <TabPanel>
+              <Upload></Upload>
+            </TabPanel>
+
+>>>>>>> 41bf28c7c5aa127941d2e5ba1de46e523e79679f
           </div>
         </Tabs>
       </div>
