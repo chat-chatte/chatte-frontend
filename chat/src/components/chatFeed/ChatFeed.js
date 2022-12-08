@@ -6,7 +6,7 @@ import * as SockJS from 'sockjs-client';
 import * as Stomp from '@stomp/stompjs';
 import api from "../../api";
 
-function ChatFeed(){
+const ChatFeed = () => {
   const [messageList, setMessageList] = useState([]);
   const [stompClient, setStompClient] = useState()
 
@@ -38,10 +38,10 @@ function ChatFeed(){
       event.preventDefault();
       stompClient.send(`/app/message/${3}`, {}, JSON.stringify({'conteudo': document.getElementById('message').value, 'privado': true, 'fkUsuario': 3, 'fkGrupo': 3}));
     }
-  
+
   return (
-    <div className="chat-container">
-        <TesteHover></TesteHover>
+    <div >
+      <div className="chat-container">
       <div className="chat-feed">
         {
           messageList.map(message => (
@@ -59,8 +59,8 @@ function ChatFeed(){
             <button className="send-button" onClick={sendMessage}></button>
       </div>
     </div>
-  )
-
-}
+  </div>
+  );
+};
 
 export default ChatFeed;
