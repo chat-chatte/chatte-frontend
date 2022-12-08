@@ -1,5 +1,4 @@
 import {useState} from 'react';
-import "./hover.css"
 
 const TesteHover = () => {
   const [isHovering, setIsHovering] = useState(false);

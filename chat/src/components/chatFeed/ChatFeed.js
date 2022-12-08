@@ -1,23 +1,20 @@
 import React from "react";
-import TesteHover from "../teste/Hover";
 import Message from "../message/Message";
-import "./chat.css"
 const ChatFeed = () => {
   return (
-    <div className="chat-container">
-        <TesteHover></TesteHover>
+    <div >
+      <div className="chat-container">
       <div className="chat-feed">
-      <Message></Message>
+        <Message></Message>
+      </div>
+
       </div>
       <div className="send-message">
-          <textarea placeholder="Escreva sua mensagem...">
-            
-          </textarea>
-          <button className="send-button"></button>
+        <textarea placeholder="Escreva sua mensagem..."></textarea>
+        <button className="send-button"></button>
       </div>
     </div>
-  )
-
-}
+  );
+};
 
 export default ChatFeed;

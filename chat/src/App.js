@@ -3,75 +3,107 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "./style.css";
 import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
+import TesteHover from "./components/teste/Hover";
+import { useState } from "react";
+
+import Message from "./components/message/Message";
 
 const App = () => {
+  const [isHovering, setIsHovering] = useState(false);
+
+  const handleMouseOver = () => {
+    setIsHovering(true);
+  };
+
+  const handleMouseOut = () => {
+    setIsHovering(false);
+  };
+
   return (
     <div>
-    
-      <Tabs>
-        <div className="container">
-          <div className="company-name">
-            <h1>CHATTE</h1>
+      <div className="teste">
+        <Sidebar></Sidebar>
+        <Tabs>
+          <div className="chat-header">
+            <div className="user-chat">
+              <div
+                onMouseOver={handleMouseOver}
+                onMouseOut={handleMouseOut}
+                className="user-profile"
+              ></div>
+              <h3>User</h3>
+            </div>
+            <TabList className={"tablist"}>
+              <Tab>
+                <div id="chat" className="icon-house">
+                  <img src={require("./components/imgs/chat-icon.png")} />
+                  <p>Chat</p>
+                </div>
+              </Tab>
+
+              <Tab>
+                <div className="icon-house">
+                  <img src={require("./components/imgs/dashboard-icon.png")} />
+                  <p>Resumo</p>
+                </div>
+              </Tab>
+
+              <Tab>
+                <div className="icon-house">
+                  <img src={require("./components/imgs/contatos.png")} />
+                  <p>Contatos</p>
+                </div>
+              </Tab>
+
+              <Tab>
+                <div className="icon-house" id="configuration">
+                  <img src={require("./components/imgs/config-icon.png")} />
+                  <p>Configurações</p>
+                </div>
+              </Tab>
+
+              <Tab>
+                <div className="icon-house">
+                  <img src={require("./components/imgs/bell.png")} />
+                </div>
+              </Tab>
+            </TabList>
+            <div className="options-chat">
+              <img src={require("./components/imgs/ligar.png")} />
+              <img src={require("./components/imgs/anexo.png")} />
+            </div>
           </div>
-          <TabList className={"tablist"}>
-            <Tab>
-              <div id="chat" className="icon-house">
-                <img src={require("./components/imgs/chat-icon.png")} />
-                <p>Chat</p>
-              </div>
-            </Tab>
 
-            <Tab>
-              <div className="icon-house">
-                <img src={require("./components/imgs/dashboard-icon.png")} />
-                <p>Resumo</p>
-              </div>
-            </Tab>
+          {isHovering && (
+            <div>
+              <h2>Only visible when hovering div</h2>
+            </div>
+          )}
 
-            <Tab>
-              <div className="icon-house">
-                <img src={require("./components/imgs/contatos.png")} />
-                <p>Contatos</p>
-              </div>
-            </Tab>
+          <div className="body-container">
+            <TabPanel>
+              <ChatFeed></ChatFeed>
 
-            <Tab>
-              <div className="icon-house" id="configuration">
-                <img src={require("./components/imgs/config-icon.png")} />
-                <p>Configurações</p>
-              </div>
-            </Tab>
+            </TabPanel>
 
-            <Tab>
-              <div className="icon-house" >
-                <img src={require("./components/imgs/bell.png")} />
-              </div>
-            </Tab>
-          </TabList>
-        </div>
-        <div className="body-container">
-          <Sidebar></Sidebar>
-          <TabPanel>
-            <ChatFeed />
-          </TabPanel>
+            <TabPanel>
+              <h2> 2</h2>
+            </TabPanel>
 
-          <TabPanel>
-            <h2> 2</h2>
-          </TabPanel>
+            <TabPanel>
+              <h2> 3</h2>
+            </TabPanel>
 
-          <TabPanel>
-            <h2> 3</h2>
-          </TabPanel>
+            <TabPanel>
+              <h2> 4</h2>
+            </TabPanel>
 
-          <TabPanel>
-            <h2> 4</h2>
-          </TabPanel>
-
-          <TabPanel>
-            <h2> 5</h2>
-          </TabPanel>
-        </div>
-      </Tabs>
+            <TabPanel>
+              <h2> 5</h2>
+            </TabPanel>
+          </div>
+        </Tabs>
+      </div>
     </div>
   );
 };

@@ -1,17 +1,18 @@
 import React from "react";
-import "./sidebar.css"
+import UserSidebar from "../user-sidebar/UserSidebar";
+
 const Sidebar  = () => {
   return (
     <div className="sidebar">
         <input placeholder="Buscar" className="search"></input>
-        <h3 id="texto">Conversas</h3>
+        <span className="addjust-group"> <h3>Conversas</h3> </span>
     <div className="chats-container">
-      <div className="chat-conversation">
-        <div className="user-profile-chat">
+      <UserSidebar></UserSidebar>
+    </div>
 
-        </div>
-        <p>Nome Sobrenome</p>
-      </div>
+    <span className="addjust-group"> <h3>Grupos</h3> <button>+</button> </span>
+    <div className="chats-container">
+      <UserSidebar></UserSidebar>
     </div>
 
     </div>
