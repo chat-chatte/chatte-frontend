@@ -8,7 +8,7 @@ import VideCall from "./components/videocall/VideoCall";
 import {BsBell} from "react-icons/bs";
 import UserConfig from "./components/userconfig/UserConfig";
 
-import Message from "./components/message/Message";
+import Upload from "./components/upload/Upload";
 
 const App = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -70,6 +70,13 @@ const App = () => {
                   <img src={require("./components/imgs/bell.png")} />
                 </div>
               </Tab>
+
+              <Tab>
+                <div className="icon-house" id="configuration">
+                  <p>Cadastro via arquivo</p>
+                </div>
+              </Tab>
+
             </TabList>
             <div className="options-chat">
               <img src={require("./components/imgs/ligar.png")} />
@@ -105,6 +112,11 @@ const App = () => {
             <TabPanel>
               
             </TabPanel>
+       
+            <TabPanel>
+              <Upload></Upload>
+            </TabPanel>
+
           </div>
         </Tabs>
       </div>
