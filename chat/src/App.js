@@ -5,10 +5,10 @@ import Sidebar from "./components/sidebar/Sidebar";
 import ChatFeed from "./components/chatFeed/ChatFeed";
 import { useState } from "react";
 import VideCall from "./components/videocall/VideoCall";
-import {BsBell} from "react-icons/bs";
 import UserConfig from "./components/userconfig/UserConfig";
 
 import Upload from "./components/upload/Upload";
+import ListarTodos from "./components/listar-todos/ListarTodos";
 
 const App = () => {
   const [isHovering, setIsHovering] = useState(false);
@@ -65,17 +65,12 @@ const App = () => {
               </Tab>
 
               <Tab>
-                <div className="icon-house">
-                  
-                  <img src={require("./components/imgs/bell.png")} />
-                </div>
-              </Tab>
-
-              <Tab>
                 <div className="icon-house" id="configuration">
                   <p>Cadastro via arquivo</p>
                 </div>
               </Tab>
+
+
 
             </TabList>
             <div className="options-chat">
@@ -102,15 +97,11 @@ const App = () => {
             </TabPanel>
 
             <TabPanel>
-              <h2> 3</h2>
+              <ListarTodos/>
             </TabPanel>
 
             <TabPanel>
             <UserConfig/>
-            </TabPanel>
-
-            <TabPanel>
-              
             </TabPanel>
        
             <TabPanel>

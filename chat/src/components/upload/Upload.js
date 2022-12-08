@@ -3,7 +3,9 @@ import api from "../../api";
 
 const Upload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
-
+    const [uploadedFile, setUploadedFile] = useState(null); 
+    useEffect(() => {
+    
     return (
     <>
         <button
@@ -35,6 +37,9 @@ const Upload = (props) => {
                     .then((res) => {
                         console.log('foi');
                         setSelectedFile(null);
+                        api.get('/uploads').then(res => {
+                            setUploadedFile(res.data)
+                        })
                     }).catch((error) => {
                         console.log('deu erro');
                         setSelectedFile(null);
