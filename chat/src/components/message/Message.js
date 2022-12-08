@@ -1,13 +1,19 @@
 import React from "react";
-const Message = () => {
+import "./mensagem.css"
+
+const Message = (props) => {
   return (
     <div>
     <div className="message-container">
        <h3>
-        Vitor Andrade
+          {
+            props.nmUsuario
+          }
        </h3>
     <p>
-        Mensagem de teste
+      {
+        props.conteudo
+      }
     </p>
     </div>
     </div>
