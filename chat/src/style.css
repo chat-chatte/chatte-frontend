@@ -350,6 +350,11 @@ li {
 }
 
 .config-container{
+  background-image: url(./components/imgs/rosa-chatte.png);
+  background-repeat: no-repeat;
+  background-size: 30%;
+  background-position-y: 90%;
+  background-position-x: 90%;
   width: 75vw;
   box-sizing: border-box;
   padding-right: 1%;
