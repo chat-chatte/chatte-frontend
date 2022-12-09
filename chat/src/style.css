@@ -185,6 +185,10 @@ li {
   height: 100%;
 }
 
+.options-chat img {  
+  cursor: pointer;
+}
+
 .send-button {
   z-index: 1;
   height: 40px;
@@ -347,6 +351,7 @@ li {
   color: white;
   background-color: #EF5A5C;
   height: 70%;
+  cursor: pointer;
 }
 
 .controlls-options{

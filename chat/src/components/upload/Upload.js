@@ -4,7 +4,7 @@ import api from "../../api";
 const Upload = (props) => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [uploadedFile, setUploadedFile] = useState(null); 
-    useEffect(() => {
+  
     
     return (
     <>
